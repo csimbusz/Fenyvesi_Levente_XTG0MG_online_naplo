@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online napló</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>Online napló</h1>
+      <p>Privát jegyzetek létrehozása, szerkesztése és listázása.</p>
+    </section>
+
+    <section class="form-card">
+      <h2 id="form-title">Új jegyzet</h2>
+
+      <form id="note-form">
+        <input type="hidden" id="note-id" />
+
+        <label for="title">Cím</label>
+        <input id="title" type="text" placeholder="Például: Mai gondolatok" required />
+
+        <label for="content">Tartalom</label>
+        <textarea id="content" rows="6" placeholder="Írd ide a jegyzet tartalmát..." required></textarea>
+
+        <div class="actions">
+          <button type="submit">Mentés</button>
+          <button type="button" id="cancel-edit" class="secondary hidden">Mégse</button>
+        </div>
+
+        <p id="message"></p>
+      </form>
+    </section>
+
+    <section class="notes-section">
+      <h2>Jegyzetek</h2>
+      <div id="notes-list" class="notes-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
